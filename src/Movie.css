@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
 
-
 *{
     box-sizing: border-box;
 }
@@ -30,7 +29,6 @@ body,
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 300;
 }
 
 .movies{
