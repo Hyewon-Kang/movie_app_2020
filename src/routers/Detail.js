@@ -1,6 +1,7 @@
 import React from "react";
 import "./Detail.css";
 
+
 class Detail extends React.Component{
     componentDidMount(){
         const {location, history} = this.props;
@@ -11,7 +12,28 @@ class Detail extends React.Component{
     render(){
         const {location} = this.props;
         if(location.state){
-             return <span>{location.state.title}</span>;
+            const movie= location.state;
+            const genres = movie.genres;
+             return (
+                <section className="detail_data">
+                    <div className="movie_img">
+                        <img src={movie.poster} alt={movie.title} title={movie.title} />
+                        <div className="movie_detail">
+                            <h1>{movie.title}<span>&nbsp;&nbsp;({movie.year})</span></h1>
+                            <div className="movie_genres">
+                                <ul className="movies_genres">
+                                    {genres.map((genre, index) => <li key={index} className="genres_genre">{genre}</li>)}
+                                </ul>
+                            </div>
+                            <div className="movie_summary">
+                                <h3>Summary:<br/></h3>
+                                <p>&nbsp;&nbsp;{movie.summary}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+            );
         } else {
             return null;
         }

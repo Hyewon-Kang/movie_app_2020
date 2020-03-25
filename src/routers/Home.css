@@ -13,6 +13,7 @@ a{
     text-decoration: none;
 }
 
+
 .container {
     height: 100%;
     display: flex;
@@ -28,11 +29,10 @@ a{
     font-weight: 300;
   }
   
-  .movies {
+  .container .movies {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: wrap;
     padding: 30px;
     padding-top: 70px;
