@@ -4,6 +4,7 @@ import About from "./routers/About";
 import Home from "./routers/Home";
 import Detail from "./routers/Detail";
 import Navigation from "./components/Navigation";
+import "./App.css";
 
 function App(){
   return (
